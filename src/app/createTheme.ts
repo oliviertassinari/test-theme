@@ -1,5 +1,5 @@
 export default function createTheme() {
   return {
-    spacing: 8,
+    spacing: (value: number) => value * 8,
   };
 }

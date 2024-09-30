@@ -1,6 +1,3 @@
 "use client"
-import createTheme from "./createTheme";
-
-const themeClient = createTheme();
-
-export default themeClient;
+import themeServer from "./themeServer";
+export default themeServer;
