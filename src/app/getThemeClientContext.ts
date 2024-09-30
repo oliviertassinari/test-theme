@@ -1,12 +1,13 @@
 import * as React from 'react';
-import ponyfillGlobal from './ponyfillGlobal';
 
-ponyfillGlobal.themeClientContext = null as any;
+// Don't initialize here as getThemeClientContext() is
+// used by useTheme() which is called from the server-side bundle.
+let themeClientContext = null as any;
 
 export default function getThemeClientContext() {
-  if (!ponyfillGlobal.themeClientContext) {
-    ponyfillGlobal.themeClientContext = React.createContext({});
+  if (!themeClientContext) {
+    themeClientContext = React.createContext({});
   }
 
-  return ponyfillGlobal.themeClientContext;
+  return themeClientContext;
 }
