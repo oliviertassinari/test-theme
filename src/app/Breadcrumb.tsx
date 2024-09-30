@@ -5,7 +5,7 @@ export default function Breadcrumb() {
   console.log('Breadcrumb', theme);
   return (
     <div style={{ margin: theme.spacing(2) }}>
-      {'home > settings'}
+      {'Breadcrumb 1 > Breadcrumb 2'}
     </div>
   )
 }
